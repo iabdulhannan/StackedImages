@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacked Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js"
+            integrity="sha256-c3VbCrdCtTHmXYAuxRT4D0Cy5VC/0zBnXVRIvJiV9xo=" crossorigin="anonymous"></script>
+
+    <style>
+        .stack {
+            position: relative;
+        }
+
+        .flatten {
+            top: 50%;
+            left: 50%;
+            margin-right: 50px;
+            position: absolute;
+            transform: translate(-50%, -50%) rotate3d(17, 10, -8, 80deg);
+            transform-style: preserve-3d;
+            border: lightgray 2px solid;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+
+
+        .normalize {
+            transform: translate(-50%, -50%) rotate3d(1, 1, 1, 0deg);
+        }
+
+
+    </style>
+</head>
+<body class="bg-gray-900 overflow-x-hidden">
+<main class="w-full">
+    <section class="text-white w-full p-10 flex justify-center">
+        <div class="container grid grids-col-1 sm:grid-cols-12 gap-x-10 justify-items-center w-full"
+             data-aos="fade-left">
+            <div class="col-span-1 sm:col-span-6">
+                <p class="text-justify">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <!--            <div class="col-span-1 sm:col-span-6 w-full h-full py-20">
+                            <div class="stack w-full h-full">
+                                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten">
+                                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten mt-12">
+                                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten mt-24">
+                            </div>
+
+                        </div>-->
+            <div class="col-span-1 sm:col-span-6 w-full h-full py-20">
+                <div class="stack w-full h-full">
+               <span>
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten z-20">
+               </span>
+                    <span>
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten z-10 mt-12">
+                </span>
+                    <span class="absolute w-full h-full">
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten mt-24">
+                </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="text-white w-full p-10 flex justify-center">
+        <div class="container grid grids-col-1 sm:grid-cols-12 gap-x-10 justify-items-center w-full"
+             data-aos="fade-left">
+            <div class="col-span-1 sm:col-span-6">
+                <p class="text-justify">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="col-span-1 sm:col-span-6 w-full h-full py-20">
+                <div class="stack w-full h-full">
+               <span>
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten z-20">
+               </span>
+                    <span>
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten z-10 mt-12">
+                </span>
+                    <span class="absolute w-full h-full">
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten mt-24">
+                </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="text-white w-full p-10 flex justify-center">
+        <div class="container grid grids-col-1 sm:grid-cols-12 gap-x-10 justify-items-center w-full"
+             data-aos="fade-left">
+            <div class="col-span-1 sm:col-span-6">
+                <p class="text-justify">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="col-span-1 sm:col-span-6 w-full h-full py-20">
+                <div class="stack w-full h-full">
+               <span>
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten z-20">
+               </span>
+                    <span>
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten z-10 mt-12">
+                </span>
+                    <span class="absolute w-full h-full">
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten mt-24">
+                </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="text-white w-full p-10 flex justify-center">
+        <div class="container grid grids-col-1 sm:grid-cols-12 gap-x-10 justify-items-center w-full">
+            <div class="col-span-1 sm:col-span-6">
+                <p class="text-justify">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="col-span-1 sm:col-span-6 w-full h-full py-20">
+                <div class="stack w-full h-full">
+               <span>
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten z-20">
+               </span>
+                    <span>
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten z-10 mt-12">
+                </span>
+                    <span class="absolute w-full h-full">
+                <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten mt-24">
+                </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="text-white w-full p-10 flex justify-center py-36">
+        <div class="container grid grids-col-1 sm:grid-cols-12 gap-x-10 justify-items-center w-full">
+            <div class="col-span-1 sm:col-span-6">
+                <p class="text-justify">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.e centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.e centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was .
+                </p>
+            </div>
+            <div class="col-span-1 sm:col-span-6 py-28 w-full h-full flex items-center">
+                <div class="stack w-full h-full">
+                    <span class="absolute w-full h-full z-20" data-aos="fade-left" data-aos-duration="600"
+                          data-aos-easing="linear">
+                    <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten">
+                    </span>
+                    <span class="absolute w-full h-full z-10" data-aos="fade-left" data-aos-duration="1200"
+                          data-aos-easing="linear">
+                    <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten mt-12">
+                    </span>
+                    <span class="absolute w-full h-full" data-aos="fade-left" data-aos-duration="1800"
+                          data-aos-easing="linear">
+                    <img src="Assets/Images/img.png" width="400" class="rounded-2xl flatten mt-24">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+<script>
+    $(document).ready(function () {
+
+        //Desktop Events
+        $('.flatten').mouseover(function () {
+            $(this).addClass('normalize')
+            $(this).closest('span').css('z-index', 100)
+        }).mouseout(function () {
+            $(this).removeClass('normalize')
+
+            setTimeout(() => {
+                $(this).closest('span').css('z-index', '')
+            }, 200)
+        })
+
+        //Mobile Events
+        $(".flatten").bind("touchstart", function () {
+            $(this).addClass('normalize')
+            $(this).closest('span').css('z-index', 100)
+        }).touchend(function () {
+            $(this).removeClass('normalize')
+            $(this).closest('span').css('z-index', '')
+
+        });
+
+        //Hides the loading message at bottom, caused by jQuery Mobile
+        $.mobile.loading().hide();
+    })
+</script>
+
+
+</html>
