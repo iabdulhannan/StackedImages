@@ -212,22 +212,25 @@
             $(this).closest('span').css('z-index', 100)
         }).mouseout(function () {
             $(this).removeClass('normalize')
-
-            setTimeout(() => {
-                $(this).closest('span').css('z-index', '')
-            }, 200)
         })
 
         //Mobile Events
         $(".flatten").bind("touchstart", function () {
             $(this).addClass('normalize')
             $(this).closest('span').css('z-index', 100)
-        }).touchend(function () {
+        })
+        $(".flatten").bind("touchend", function () {
             $(this).removeClass('normalize')
-            $(this).closest('span').css('z-index', '')
+            setTimeout(() => {
+                $(this).closest('span').css('z-index', '')
+            }, 200)
+        })
 
-        });
-
+        window.oncontextmenu = function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+        };
         //Hides the loading message at bottom, caused by jQuery Mobile
         $.mobile.loading().hide();
     })
