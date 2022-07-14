@@ -212,19 +212,26 @@
             $(this).closest('span').css('z-index', 100)
         }).mouseout(function () {
             $(this).removeClass('normalize')
-        })
-
-        //Mobile Events
-        $(".flatten").bind("touchstart", function () {
-            $(this).addClass('normalize')
-            $(this).closest('span').css('z-index', 100)
-        })
-        $(".flatten").bind("touchend", function () {
-            $(this).removeClass('normalize')
             setTimeout(() => {
                 $(this).closest('span').css('z-index', '')
             }, 200)
         })
+
+
+        //Mobile Events
+        $(".flatten").bind("touchstart", function () {
+            $(this).addClass('normalize')
+            $(".flatten").closest('span').css('z-index', 0)
+            $(this).closest('span').css('z-index', 100)
+        })
+
+        $(".flatten").bind("touchend", function () {
+            $(this).removeClass('normalize')
+            $(".flatten").closest('span').css('z-index', '')
+            $(this).closest('span').css('z-index', '')
+
+        })
+
 
         window.oncontextmenu = function (event) {
             if ($(window).width() < 640) {
